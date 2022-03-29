@@ -233,7 +233,9 @@ export class ExecutionContext {
       Rinkeby: 'https://rinkeby.etherscan.io/tx/',
       Ropsten: 'https://ropsten.etherscan.io/tx/',
       Kovan: 'https://kovan.etherscan.io/tx/',
-      Goerli: 'https://goerli.etherscan.io/tx/'
+      Goerli: 'https://goerli.etherscan.io/tx/',
+      'CSC Main': 'https://www.coinex.net/tx/',
+      'CSC Test': 'https://testnet.coinex.net/tx/'
     }
 
     if (transactionDetailsLinks[network]) {

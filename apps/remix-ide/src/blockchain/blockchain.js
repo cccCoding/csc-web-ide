@@ -355,10 +355,17 @@ export class Blockchain extends Plugin {
       this.executionContext.detectNetwork((error, network) => {
         if (error || !network) return
         if (network.name === 'VM') return
-        this.call('terminal', 'logHtml',
-          (<a href={etherScanLink(network.name, txhash)} target="_blank">
-            view on etherscan
-          </a>))        
+        if (network.name === 'CSC Test' || network.name === 'CSC Main') {
+          this.call('terminal', 'logHtml',
+            (<a href={etherScanLink(network.name, txhash)} target="_blank">
+              view on CSC explorer
+            </a>))
+        } else {
+          this.call('terminal', 'logHtml',
+            (<a href={etherScanLink(network.name, txhash)} target="_blank">
+              view on etherscan
+            </a>))
+        }
       })
     })
     this.txRunner = new TxRunner(web3Runner, { runAsync: true })
