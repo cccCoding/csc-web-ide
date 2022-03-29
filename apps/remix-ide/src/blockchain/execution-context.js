@@ -84,6 +84,8 @@ export class ExecutionContext {
         else if (id === 4) name = 'Rinkeby'
         else if (id === 5) name = 'Goerli'
         else if (id === 42) name = 'Kovan'
+        else if (id === 52) name = 'CSC Main'
+        else if (id === 53) name = 'CSC Test'
         else name = 'Custom'
 
         if (id === '1') {
